@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Day03 Notes</title>
+</head>
+<body>
+
+<h1>HTML Day03</h1>
+
+<h2>File Path System</h2>
+
+<h3>Step 1: The First Principle</h3>
+<p>A website is not one single file. It's a collection of different files (HTML, CSS, JavaScript, images, videos, fonts) that work together. These files are organized into folders.</p>
+
+<h3>Step 2: The Core Problem</h3>
+<p>If your index.html needs to display an image named logo.png, how does the HTML file tell the browser where to find it?</p>
+<p>The browser needs an exact address to locate the file. A <strong>file path</strong> is that address.</p>
+
+<h3>A) Relative File Paths</h3>
+<p>Relative paths start from the location of the file you are currently in. You'll use these most of the time.</p>
+
+<pre>
+my-website/
+├── index.html
+├── about.html
+├── images/
+│   ├── logo.png
+│   └── hero.jpg
+└── pages/
+    ├── contact.html
+    └── terms.html
+</pre>
+
+<h4>Scenario 1: Same Folder</h4>
+<p>Link from index.html to about.html:</p>
+<pre>
+<a href="about.html">About Us</a>
+</pre>
+
+<h4>Scenario 2: Sub-Folder (Going Down)</h4>
+<p>Link from index.html to images/logo.png:</p>
+<pre>
+<img src="images/logo.png" alt="My Website Logo">
+</pre>
+
+<h4>Scenario 3: Parent Folder (Going Up)</h4>
+<p>Link from pages/contact.html to images/logo.png:</p>
+<pre>
+<img src="../images/logo.png" alt="My Website Logo">
+</pre>
+
+<h3>B) Absolute File Paths</h3>
+<p>Absolute paths give the full URL to a resource. Use them only for external resources.</p>
+
+<pre>
+<a href="https://www.google.com">Search on Google</a>
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Html5_logo_and_wordmark.svg" alt="HTML5 Logo">
+</pre>
+
+<h3>Why Not Use Absolute Paths for Local Files?</h3>
+<p>Copying paths like <code>C:/Users/Arjun/Desktop/my-website/images/logo.png</code> will only work on your computer. On a web server, it breaks.</p>
+
+<h3>Summary / Rules of Thumb</h3>
+<ol>
+<li>For your own files, ALWAYS use Relative Paths.</li>
+<li>For other websites' files, ALWAYS use Absolute Paths.</li>
+</ol>
+
+<h2>HTML Boilerplate Code</h2>
+<p>Browsers need predictable instructions. A boilerplate provides the foundation for every HTML page.</p>
+
+<pre>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+</pre>
+
+<h3>Key Tags Explained</h3>
+<ul>
+<li><strong>&lt;!DOCTYPE html&gt;</strong> - Defines HTML5 standard.</li>
+<li><strong>&lt;html lang="en"&gt;</strong> - Sets page language for accessibility and SEO.</li>
+<li><strong>&lt;head&gt;</strong> - Metadata for the browser, not visible content.</li>
+<li><strong>&lt;meta charset="UTF-8"&gt;</strong> - Ensures correct text encoding.</li>
+<li><strong>&lt;meta name="viewport"&gt;</strong> - Enables responsive design for mobile devices.</li>
+<li><strong>&lt;title&gt;</strong> - Name shown in browser tabs and bookmarks.</li>
+<li><strong>&lt;body&gt;</strong> - Contains all visible content.</li>
+</ul>
+
+<h2>Multipage Website</h2>
+<p>Complex websites are split into multiple pages. Navigation links (<code>&lt;a&gt;</code>) connect them seamlessly.</p>
+
+<h3>The &lt;div&gt; (Generic Box)</h3>
+<p>Used to group elements together for styling or layout purposes.</p>
+
+<pre>
+<div>
+    <img src="avatar.png">
+    <h2>Arjun Kumar</h2>
+    <p>Loves to code and teach HTML.</p>
+</div>
+</pre>
+
+<h3>class and id (Labels for Boxes)</h3>
+<p>Use <strong>id</strong> for unique elements and <strong>class</strong> for multiple similar elements.</p>
+
+<pre>
+<div id="main-header">Header</div>
+<div id="featured-profile" class="profile-card">Featured Card</div>
+<div class="profile-card">Standard Card</div>
+</pre>
+
+<h3>The &lt;span&gt; (Inline Highlighter)</h3>
+<p>Used to style text inline without creating a new block.</p>
+
+<pre>
+<p>This is very <span class="highlight">important</span> information.</p>
+</pre>
+
+<h3>Semantic Containers</h3>
+<ul>
+<li><strong>&lt;header&gt;</strong> - Top section with logo and navigation.</li>
+<li><strong>&lt;footer&gt;</strong> - Bottom section with contact info and links.</li>
+<li><strong>&lt;main&gt;</strong> - Main content of the page; one per page.</li>
+
+
+</ul>
+
+<h1>Useful HTML Resources</h1>
+
+<p>Here are some important links for HTML notes and media:</p>
+<br>
+<ul>
+    <li>
+        <a href="https://www.notion.so/HTML-MEDIA-2673" target="_blank">
+            HTML MEDIA 2673 (Notion Guide)
+        </a>
+    </li>
+    <li>
+        <a href="https://github.com/coderarmy-notes/me" target="_blank">
+            Coder Army Notes (GitHub)
+        </a>
+    </li>
+</ul>
+</body>
+</html>
