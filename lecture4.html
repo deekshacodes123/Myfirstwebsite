@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Forms Tutorial</title>
+</head>
+<body>
+
+<h1>Forms in HTML</h1>
+
+<h2>The Web Needs Interaction</h2>
+<p>A website is not just a page to read. It needs a way to <strong>get information from the user</strong> and send it to the server.</p>
+<p>Without this, you cannot log in, search, post comments, or buy anything online.</p>
+
+<h3>How Forms Solve This</h3>
+<p>Forms let us:</p>
+<ol>
+  <li>Show fields for the user to fill (text boxes, checkboxes, dropdowns).</li>
+  <li>Package the user’s data neatly.</li>
+  <li>Send the data to the server.</li>
+  <li>Specify how the data should be sent.</li>
+</ol>
+
+<h2>Input Fields</h2>
+<p>The input tag creates a field where users can type information. The type attribute decides the behavior.</p>
+<p>Example of a text field:</p>
+<pre>
+<form>
+    <input type="text">
+</form>
+</pre>
+
+<h2>Adding Labels</h2>
+<p>Without a label, the user doesn’t know what to type. The label tag describes the input.</p>
+<pre>
+<label for="firstName">First Name:</label>
+<input type="text" id="firstName">
+</pre>
+<p>Clicking on the label will focus the input, improving accessibility.</p>
+
+<h3>Form Submission</h3>
+<p>Wrap your fields in a form tag and add a submit button:</p>
+<pre>
+<form>
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName">
+    <br><br>
+    
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName">
+    <br><br>
+    
+    <button type="submit"><strong>Submit</strong></button>
+</form>
+</pre>
+
+<h3>Radio Buttons</h3>
+<p>Use radio buttons when the user should select only one option:</p>
+<pre>
+<label>T-Shirt Size:</label><br>
+<input type="radio" id="sizeS" name="shirtSize" value="small">
+<label for="sizeS">Small</label><br>
+
+<input type="radio" id="sizeM" name="shirtSize" value="medium">
+<label for="sizeM">Medium</label><br>
+
+<input type="radio" id="sizeL" name="shirtSize" value="large">
+<label for="sizeL">Large</label><br><br>
+</pre>
+
+<h3>Checkboxes</h3>
+<p>Use checkboxes for multiple selections:</p>
+<pre>
+<label>Pizza Toppings:</label><br>
+<input type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
+<label for="pepperoni">Pepperoni</label><br>
+
+<input type="checkbox" id="mushrooms" name="toppings" value="mushrooms">
+<label for="mushrooms">Mushrooms</label><br>
+
+<input type="checkbox" id="onions" name="toppings" value="onions">
+<label for="onions">Onions</label><br><br>
+</pre>
+
+<h3>Textarea for Long Text</h3>
+<pre>
+<label for="comments">Special Instructions:</label><br>
+<textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+<br><br>
+</pre>
+
+<h3>Dropdowns</h3>
+<pre>
+<label for="country">Country:</label><br>
+<select id="country" name="country">
+    <option value="">--Select--</option>
+    <option value="in">India</option>
+    <option value="us">USA</option>
+    <option value="uk">UK</option>
+    <option value="au">Australia</option>
+</select>
+<br><br>
+</pre>
+
+<h3>HTML5 Input Types</h3>
+<pre>
+<label for="password">Password:</label><br>
+<input type="password" id="password" name="password"><br><br>
+
+<label for="age">Age (18-99):</label><br>
+<input type="number" id="age" name="age" min="18" max="99"><br><br>
+
+<label for="dob">Date of Birth:</label><br>
+<input type="date" id="dob" name="dob"><br><br>
+</pre>
+
+<p>Other useful types: color picker, file upload, range sliders, placeholders, and required fields.</p>
+
+<h1>Useful HTML Resources</h1>
+
+<p>Here are some important links for HTML notes and media:</p>
+<br>
+<ul>
+    <li>
+        <a href="https://www.notion.so/HTML-MEDIA-2673" target="_blank">
+            HTML MEDIA 2673 (Notion Guide)
+        </a>
+    </li>
+    <li>
+        <a href="https://github.com/coderarmy-notes/me" target="_blank">
+            Coder Army Notes (GitHub)
+        </a>
+    </li>
+</ul>
+
+</body>
+</html>
