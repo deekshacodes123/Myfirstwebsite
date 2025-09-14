@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Media Guide</title>
+</head>
+<body>
+  <h1>HTML Media</h1>
+
+  <h3>Why the Web Needs More Than Text</h3>
+  <p>Webpages should be able to deliver all kinds of content, not just text and images. In the past, playing audio or video required extra plugins like Flash or QuickTime, which were slow, inconsistent, and sometimes insecure.</p>
+
+  <h3>The Main Challenge</h3>
+  <p>How can we add video and audio to a website in a way that works everywhere, without extra software? We need a standard solution that works on all devices and browsers.</p>
+
+  <h3>The HTML5 Solution: Video and Audio Tags</h3>
+  <p>HTML5 introduced special tags to handle media natively and easily.</p>
+  <hr />
+
+  <h3>Part 1: Adding a Video</h3>
+  <p>The simplest video tag just points to a file:</p>
+  <pre><code>
+  video src="my-video.mp4"
+  </code></pre>
+  <p>But this only shows a still image of the first frame. To make it playable, we need controls.</p>
+
+  <h3>Adding Controls</h3>
+  <p>Simply add the "controls" attribute to get a built-in player:</p>
+  <pre><code>
+  video src="my-video.mp4" controls
+  </code></pre>
+  <p>Now you have play, pause, volume, and fullscreen functionality automatically.</p>
+  <hr />
+
+  <h3>Part 2: Extra Attributes</h3>
+  <ul>
+    <li>
+      <strong>Width and Height:</strong> Set the player size.
+      <pre><code>
+      video src="video.mp4" width="640" height="360" controls
+      </code></pre>
+    </li>
+    <li>
+      <strong>Autoplay:</strong> Plays the video automatically (usually muted for modern browsers):
+      <pre><code>
+      video src="video.mp4" autoplay muted controls
+      </code></pre>
+    </li>
+    <li>
+      <strong>Loop:</strong> Makes the video restart automatically.
+    </li>
+    <li>
+      <strong>Poster:</strong> Displays a thumbnail before playing:
+      <pre><code>
+      video src="video.mp4" poster="thumbnail.jpg" controls
+      </code></pre>
+    </li>
+  </ul>
+
+  <h3>Part 3: Audio</h3>
+  <p>Audio works similarly to video, just without the visual part:</p>
+  <pre><code>
+  p Listen to the theme song:
+  audio src="theme.mp3" controls
+  </code></pre>
+
+  <hr />
+  <h3>Part 4: Advanced Tips</h3>
+  <p>Not all browsers support the same file types. To handle multiple formats, use a source list:</p>
+  <pre><code>
+  video controls poster="thumbnail.jpg"
+    source src="video.webm" type="video/webm"
+    source src="video.mp4" type="video/mp4"
+    Sorry, your browser cannot play this video.
+  </code></pre>
+
+  <p>For accessibility, add captions or subtitles using tracks:</p>
+  <pre><code>
+  video controls
+    source src="video.mp4" type="video/mp4"
+    track src="captions_en.vtt" kind="captions" srclang="en" label="English"
+    track src="subtitles_es.vtt" kind="subtitles" srclang="es" label="Español"
+  </code></pre>
+
+  <h3>Two Ways to Show the Copyright Symbol</h3>
+  <p>Entity name: &copy;<br>
+     Entity number: &#169;</p>
+  <p>Example usage in a footer:</p>
+  <pre><code>
+  footer
+    p Copyright &copy; 2024 My Website. All Rights Reserved.
+  </code></pre>
+
+  <h3>Other Symbols</h3>
+  <table border="1">
+    <tr>
+      <th>Symbol</th>
+      <th>Description</th>
+      <th>Entity Name</th>
+      <th>Entity Number</th>
+    </tr>
+    <tr>
+      <td>&reg;</td>
+      <td>Registered Trademark</td>
+      <td>&reg;</td>
+      <td>&reg;</td>
+    </tr>
+    <tr>
+      <td>&trade;</td>
+      <td>Trademark</td>
+      <td>&trade;</td>
+      <td>&trade;</td>
+    </tr>
+    <tr>
+      <td>&amp;</td>
+      <td>Ampersand</td>
+      <td>&amp;</td>
+      <td>&amp;</td>
+    </tr>
+  </table>
+
+  <p>Using entities avoids confusing the browser when displaying symbols like < or >.</p>
+
+  <h1>Useful HTML Resources</h1>
+
+<p>Here are some important links for HTML notes and media:</p>
+<br>
+<ul>
+    <li>
+        <a href="https://www.notion.so/HTML-MEDIA-2673" target="_blank">
+            HTML MEDIA 2673 (Notion Guide)
+        </a>
+    </li>
+    <li>
+        <a href="https://github.com/coderarmy-notes/me" target="_blank">
+            Coder Army Notes (GitHub)
+        </a>
+    </li>
+</ul>
+</body>
+</html>
